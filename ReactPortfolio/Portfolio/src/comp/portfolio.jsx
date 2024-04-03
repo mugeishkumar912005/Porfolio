@@ -38,7 +38,8 @@ const Portfolio = () => {
     e.preventDefault();
     try {
       if (name.trim() !== '' && Ph.trim() !== '' && text.trim() !== '') {
-        const Msg = await axios.post("http://localhost:6900/post", {
+        const Msg = await axios.post("porfolio-api-three.vercel.app
+", {
           name,
           Ph,
           text
