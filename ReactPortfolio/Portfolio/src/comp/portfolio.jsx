@@ -97,7 +97,7 @@ const Portfolio = () => {
               <a href="mailto:kmugeis.2005@gmail.com" ><img className="conapp" src={gmail} alt="" width="30px" /></a>
             </div><br />
             <div id="cv">
-              <a href="C:\Users\Mugeish\Downloads\MyResumeFinal1.pdf" id="dwcv" download="MyResumeFinal1.pdf">Download My CV</a>
+           <a href="C:/Users/Mugeish/Downloads/MyResumeFinal1.pdf" id="dwcv" download="MyResumeFinal1.pdf">Download My CV</a>
             </div>
           </div>
         </div>
