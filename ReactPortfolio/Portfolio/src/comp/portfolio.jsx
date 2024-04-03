@@ -34,27 +34,34 @@ const Portfolio = () => {
   // useEffect(()=>{
      
   // },[Status])
-  const HandelMsg = async (e) => {
-    e.preventDefault();
-    try {
-      if (name.trim() !== '' && Ph.trim() !== '' && text.trim() !== '') {
-        const Msg = await axios.post("https://porfolio-api-three.vercel.app
-", {
-          name,
-          Ph,
-          text
-        });
+ const HandelMsg = async (e) => {
+  e.preventDefault();
+  try {
+    if (name.trim() !== '' && Ph.trim() !== '' && text.trim() !== '') {
+      const response = await axios.post("https://porfolio-api-three.vercel.app", {
+        name,
+        Ph,
+        text
+      });
+      // Assuming the response indicates success in some way, you can check that here
+      if (response.status === 200) {
         SetStatus(true); 
         Setname('');
         SetPh('');
         Settext('');
       } else {
         SetStatus(false);
+        console.error("Failed to send message. Server responded with status: ", response.status);
       }
-    } catch (error) {
-      console.log("error: " + error);
+    } else {
+      SetStatus(false);
     }
+  } catch (error) {
+    console.error("An error occurred while sending the message: ", error);
+    SetStatus(false);
   }
+}
+
   
 
   return (
