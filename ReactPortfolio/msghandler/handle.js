@@ -7,8 +7,8 @@ const User = M.model('Msg', Mod);
 const App = Ex();
 App.use(B.json());
 const corsOptions = {
-    origin: '',
-    methods: 'GET, POST',
+    origin:[''],
+    methods: ['GET, POST'],
   };
   
   App.use(C(corsOptions));
