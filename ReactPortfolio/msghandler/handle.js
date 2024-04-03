@@ -7,9 +7,8 @@ const User = M.model('Msg', Mod);
 const App = Ex();
 App.use(B.json());
 const corsOptions = {
-    origin: 'http://example.com',
-    methods: 'GET, POST', // Specify the allowed HTTP methods
-    allowedHeaders: 'Content-Type, Authorization', // Specify the allowed headers
+    origin: '',
+    methods: 'GET, POST',
   };
   
   App.use(C(corsOptions));
